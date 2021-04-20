@@ -26,3 +26,20 @@ function load_scripts(){
 }
 
 add_action('wp_enqueue_scripts','load_scripts');
+
+add_action('widgets_init','minifolio_sidebars');
+
+function minifolio_sidebars(){
+    register_sidebar(
+        array(
+            'name' => 'Banner',
+            'id' => 'banner',
+            'description' => 'Tipe any text here:', 
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+            
+        )
+    );
+}

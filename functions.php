@@ -26,9 +26,3 @@ function load_scripts(){
 }
 
 add_action('wp_enqueue_scripts','load_scripts');
-
-
-/*
-add_action( 'after_setup_theme', 'twenty_twenty_one_setup' )
-*/
-

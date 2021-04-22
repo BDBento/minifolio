@@ -147,9 +147,9 @@ ul li {
 	display: inline-block;
 }
 .navigation a {
-	color: rgba(255, 255, 255, 0.75);
+	color: rgba(66, 66, 66, 0.75);
 	font-size: 13px;
-	font-weight: 400;
+	font-weight: 900;
 	margin-left: 40px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
@@ -298,20 +298,20 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 .banner {
-	background-color: #65349c;
+	background-image: url("https://s1.1zoom.me/big3/971/Soldiers_Sniper_rifle_456665.jpg");
 	min-height: 750px;
 }
 .banner-text {
 	padding-top: 28%;
 }
 .banner-text h1 {
-	color: #fff;
+	color: #000000;
 	font-family: "Roboto Slab", sans-serif;
 	font-size: 80px;
 	font-weight: 700;
 }
 .banner-text p {
-	color: #fff;
+	color: #000000;
 	font-size: 19px;
 	font-weight: 400;
 	letter-spacing: 3px;

@@ -37,8 +37,56 @@ function minifolio_sidebars(){
             'description' => 'Tipe any text here:', 
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
-            'before_title' => '',
-            'after_title' => '',
+            'before_title' => '<h2 class="widget-title>',
+            'after_title' => '</h2>',
+            
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => 'About Me',
+            'id' => 'about-me',
+            'description' => 'Tipe any text here:', 
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title>',
+            'after_title' => '</h2>',
+            
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => 'About Me - Second Area',
+            'id' => 'abolt-me2',
+            'description' => 'Please, drag your widgets here', 
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title>',
+            'after_title' => '</h2>',
+            
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => 'Hire Me',
+            'id' => 'hire-me',
+            'description' => 'Tipe any text here:', 
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title>',
+            'after_title' => '</h2>',
+            
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => 'Contact',
+            'id' => 'contact',
+            'description' => 'Tipe any text here:', 
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title>',
+            'after_title' => '</h2>',
             
         )
     );

@@ -22,9 +22,9 @@
     <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/logo.png" alt="Mafolio"></a>
       <nav class="navigation" role="navigation">
         <ul class="primary-nav">
-          <li><a href="#aboutme">About Me</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#aboutme">Quen sou</a></li>
+          <li><a href="#works">Trabalhos</a></li>
+          <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
       <a href="#" class="nav-toggle">Menu<span></span></a> </div>

@@ -21,11 +21,13 @@
     <!-- navigation section  -->
     <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/logo.png" alt="Mafolio"></a>
       <nav class="navigation" role="navigation">
-        <ul class="primary-nav">
-          <li><a href="#aboutme">Quen sou</a></li>
-          <li><a href="#works">Trabalhos</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
+     
+      <?php wp_nav_menu(array(
+        'theme_location'=>'primery',
+        )
+      )
+       ?>
+
       </nav>
       <a href="#" class="nav-toggle">Menu<span></span></a> </div>
     <!-- navigation section  --> 

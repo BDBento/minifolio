@@ -2,6 +2,8 @@
 
 
 function load_scripts(){
+
+    /*chamando arquivos css*/
     wp_enqueue_style('bootstrap-min',get_template_directory_uri().'/css/bootstrap.min.css' );
     wp_enqueue_style('fancybox',get_template_directory_uri().'/css/jquery.fancybox.css');
     wp_enqueue_style('main', get_template_directory_uri().'/css/main.css');
@@ -9,10 +11,11 @@ function load_scripts(){
     wp_enqueue_style('animate',get_template_directory_uri().'/css/animate.min.css');
     wp_enqueue_style('fontwesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
 
+   
+   /*chamando biblioteca jquery  e fixando a ver.*/
     wp_register_script('jquery-two','https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',array(),'1.11.3',true );
 
-
-    /*wp_register_script('jquery-two', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', arrey(), '1.11.3', true);*/
+    /*outras chamadas  js*/
     wp_enqueue_script('bootstrap-min',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery-two'),null,true);
     wp_enqueue_script('fancyboxp-min',get_template_directory_uri().'/js/jquery.fancybox.pack.js',array('jquery-two'),null,true);
     wp_enqueue_script('waypoints-min',get_template_directory_uri().'/js/jquery.waypoints.min.js',array('jquery-two'),null,true);
@@ -25,9 +28,14 @@ function load_scripts(){
 
 }
 
+/*adiciona chamada para a funçao de incluzao .js e .css*/
 add_action('wp_enqueue_scripts','load_scripts');
 
+
+/**adiciona chamada para a funçao minifolio_sidebars */
 add_action('widgets_init','minifolio_sidebars');
+
+
 
 function minifolio_sidebars(){
     register_sidebar(
@@ -37,7 +45,7 @@ function minifolio_sidebars(){
             'description' => 'Tipe any text here:', 
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
-            'before_title' => '<h2 class="widget-title>',
+            'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
             
         )
@@ -49,7 +57,7 @@ function minifolio_sidebars(){
             'description' => 'Tipe any text here:', 
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
-            'before_title' => '<h2 class="widget-title>',
+            'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
             
         )
@@ -61,7 +69,7 @@ function minifolio_sidebars(){
             'description' => 'Please, drag your widgets here', 
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
-            'before_title' => '<h2 class="widget-title>',
+            'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
             
         )
@@ -73,7 +81,7 @@ function minifolio_sidebars(){
             'description' => 'Tipe any text here:', 
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
-            'before_title' => '<h2 class="widget-title>',
+            'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
             
         )
@@ -85,9 +93,19 @@ function minifolio_sidebars(){
             'description' => 'Tipe any text here:', 
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
-            'before_title' => '<h2 class="widget-title>',
+            'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
             
         )
     );
 }
+
+/*criando menu dinamico wp */
+
+register_nav_menus(
+    array(
+        'primery'=>'Primery Menu',
+        'social' => 'Social Menu',
+    )
+
+);

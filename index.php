@@ -51,7 +51,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-2.jpg" class="work-box"> <img src="images/work-2.jpg" alt="">
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="/images/work-2.jpg" class="work-box"> <img src="/images/work-2.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <h5>Project Name</h5>
@@ -60,7 +60,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-3.jpg" class="work-box"> <img src="images/work-3.jpg" alt="">
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-3.jpg" class="work-box"> <img src="/images/work-3.jpg alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <h5>Project Name</h5>
@@ -122,10 +122,19 @@
 <section id="hireme" class="section hireme">
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
-      <h3>Need something specific?</h3>
-      <p>We are currently crafting new products but would love to hear from you.</p>
-      <a href="#contact" class="btn btn-large">Hire me</a> </div>
+          
+        <?php 
+
+          if(is_active_sidebar('hire-me')){
+            dynamic_sidebar('hire-me');
+          }
+       ?>
+          
+    </div>
   </div>
+
+  <!--contact form end--> 
+
 </section>
 <!-- hire me section --> 
 
@@ -134,20 +143,17 @@
 <section id="contact" class="section contact">
   <div class="container">
     <div class="col-md-10 col-md-offset-1 text-center">
-      <h3>Drop me a line</h3>
-      <p>I am honest, discreet and always focus on your goals. If you are looking for a strategist and experienced designer, just leave me a message and I'll contact you soon.</p>
-      <!--contact form start-->
       <div class="col-md-6 col-md-offset-3 conForm">
-        <div id="message"></div>
-        <form method="post" action="php/contact.php" name="cform" id="cform">
-          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name..." >
-          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email Address..." >
-          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Project Details..."></textarea>
-          <input type="submit" id="submit" name="send" class="submitBnt" value="Send">
-          <div id="simple-msg"></div>
-        </form>
-      </div>
-      <!--contact form end--> 
+        <div id="message">
+          <?php 
+            if(is_active_sidebar('Contact')){
+              dynamic_sidebar('Contact');
+            }
+          ?>
+
+    </div>
+    </div>
+
     </div>
   </div>
 </section>
